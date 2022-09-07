@@ -1,0 +1,6 @@
+1.0.1: First version of learning
+
+1.0.2:
+    - Migrations
+    - create_items_table.php
+    - seeder.php

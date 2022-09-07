@@ -1,0 +1,9 @@
+title = "Главная"
+url = "/"
+layout = "default"
+
+[example]
+==
+<h1>Привет</h1>
+<button data-request="example::onHello" data-request-update="'hello': '#hi'" data-request-data="{'page': {{ input('page') ? input('page') + 1 : 2  }}}">Поздороваться</button>
+<div id="hi">{% partial 'hello.htm' %}</div>
