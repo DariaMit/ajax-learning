@@ -9,18 +9,16 @@
     {% styles %}
 </head>
 <body>
-    <main>
-        {% page %}
-    </main>
+<main>
+    {% page %}
+</main>
 {#    {% scripts %}#}
-    <script src="{{ [
-        '@jquery',
-        '@framework',
-        '@framework.extras',
-        'assets/js/app.js',
-        'assets/js/pagination.js'
-    ]|theme }}"></script>
-    {% framework %}
-    {% framework extras %}
+<script src="{{ [
+    '@jquery',
+    '@framework',
+    '@framework.extras',
+]|theme }}"></script>
+{% framework %}
+{% framework extras %}
 </body>
 </html>

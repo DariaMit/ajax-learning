@@ -1,0 +1,28 @@
+{{ form_ajax('example::onFilterForm', {update: {'hello': '#hi'} }) }}
+<div id ="formFilter">
+    <label>Цифры</label>
+    {% for number in checkbox %}
+    <input type="checkbox" name="Filter[names][]" value="{{ number.name }}" />
+    <label>{{ number.name }}</label>
+    {% endfor %}
+
+    <div id="formSorting">
+        <label>СОртировка</label>
+        <select name="Filter[sort]">
+            {% for code, option in sortOptions %}
+                <option value="{{ code }}">{{ option }}</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
+{{ form_close() }}
+
+{#<form data-request="example::onFilterForm" data-request-update="'hello': '#hi', 'button': '#button'" data-request-flash="asd">#}
+{#    <div id ="formFilter">#}
+{#        <label>Цифры</label>#}
+{#        {% for number in checkbox %}#}
+{#            <input type="checkbox" name="Filter[]" value="{{ number.name }}" />#}
+{#            <label>{{ number.name }}</label>#}
+{#        {% endfor %}#}
+{#    </div>#}
+{#</form>#}

@@ -4,6 +4,15 @@ layout = "default"
 
 [example]
 ==
+
 <h1>Привет</h1>
-<button data-request="example::onHello" data-request-update="'hello': '#hi'" data-request-data="{'page': {{ input('page') ? input('page') + 1 : 2  }}}">Поздороваться</button>
-<div id="hi">{% partial 'hello.htm' %}</div>
+{#<div id="buttonNext">{% partial 'button.htm' %}</div>#}
+{#<div id="buttonFilter">{% partial 'buttonFilter.htm' %}</div>#}
+<div id="form">{% partial 'form.htm' %}</div>
+{#<button data-request="example::onHello" data-request-update="'hello': '#hi'" data-request-data="{'page': 5 }">Поздороваться</button>#}
+{#<button data-request="example::onHello" data-request-update="'hello': '#hi'" data-request-data="{page: {{ input('page') ? input('page') + 1 : 2  }} }">Поздороваться</button>#}
+{#{% partial 'hello.htm' %}#}
+<div id="hi">{% partial 'test/hello.htm' %}</div>
+
+<div id="buttonMore">{% partial 'test/buttonMore.htm' %}</div>
+

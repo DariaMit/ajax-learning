@@ -1,0 +1,82 @@
+title = "index"
+url = "/"
+layout = "main"
+
+[example]
+==
+
+{#{% import "@twig/pages/form.htm" as forms %}#}
+{#<p>{{ forms.input('username') }}</p>#}
+{#<p>{{ forms.input('password', null, 'password') }}</p>#}
+
+{#{% verbatim %}#}
+{#    <ul>#}
+{#    {% for item in 1..10 %}#}
+{#        <li>{{ item }}</li>#}
+{#    {% endfor %}#}
+{#    </ul>#}
+{#{% endverbatim %}#}
+
+
+{#{% set sizes = [34, 36, 38, 40, 42] %}#}
+{#{{ random(sizes) }}#}
+
+{#{{ sizes|filter(y => y > 38)|join(', ') }}#}
+
+{#{{ 'now'|date('H') }}#}
+
+{# {% set data = [{'a': '12'}, {'b': 13}, {'c':14}] %}#}
+{#{% set data = ['a', '12', 'b', 13, 'c', 14] %}#}
+{#{% set data = ['htsgra'] %}#}
+{#{{ data|json_encode(constant('JSON_PRETTY_PRINT')) }}#}
+
+{#{{ data|length }}#}
+
+{#{% set people = [#}
+{#    {first: "Bob", last: "Smith"},#}
+{#    {first: "Alice", last: "Dupond"},#}
+{#] %}#}
+
+{#{{ people|map(p => "#{p.first} #{p.last}")|join(' and ') }}#}
+
+{#{% set var = '<strong>hii</strong>' %}#}
+
+
+{#{{ var|raw }} #}{# var won't be escaped #}
+
+{#{{ "I like this and --that--."|replace({'this': 'apple', '--that--': "oranges"}) }}#}
+
+{#{% set fruits = [#}
+{#    { name: 'Apples', quantity: 5 },#}
+{#    { name: 'Oranges', quantity: 2 },#}
+{#    { name: 'Grapes', quantity: 4 },#}
+{#] %}#}
+
+{#{% for fruit in fruits|sort((a, b) => a.quantity <=> b.quantity)|column('name') %}#}
+{#    {{ fruit }}#}
+{#{% endfor %}#}
+
+
+
+{#щяс будет содержание индекса#}
+{#<div>{% block content %}#}
+{#        содержание индекса!#}
+{#    {% endblock %}</div>#}
+
+{#{{ source('additional.html') }}#}
+
+{#{% set name = 'Igor' %}#}
+{#{{ include(template_from_string("Hello {{ name }}")) }}#}
+
+{#{% set var = 'null' %}#}
+{#{% if var == null %}#}
+{#    aga!!!#}
+{#{% endif %}#}
+
+{#{% set text = 'HelloWorld' %}#}
+{#{{ text|humanize }}#}
+
+
+
+
+

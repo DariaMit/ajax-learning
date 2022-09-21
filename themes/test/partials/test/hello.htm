@@ -1,0 +1,10 @@
+{{ nums.currentPage() }}
+{% if nums.hasMorePages() %}
+{% for num in nums %}
+    <div>номер {{ num.name }}</div>
+{% endfor %}
+
+{% else %}
+болшьше нет
+{% endif %}
+
